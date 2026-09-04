@@ -2,7 +2,7 @@
   "id": "quest-log",
   "title": "Registro Missioni",
   "description": "A multilingual quest log module for Foundry Virtual Tabletop.",
-  "version": "0.1.0",
+  "version": "1.0.0",
 
   "authors": [
     {
@@ -20,7 +20,7 @@
 
   "manifest": "https://github.com/giulioraco1980/quest-log/releases/latest/download/module.json",
 
-  "download": "https://github.com/giulioraco1980/quest-log/releases/download/v0.1.0/quest-log.zip",
+  "download": "https://github.com/giulioraco1980/quest-log/releases/download/v1.0.0/quest-log.zip",
 
   "socket": true,
 
