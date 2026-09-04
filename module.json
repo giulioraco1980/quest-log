@@ -1,0 +1,55 @@
+{
+  "id": "quest-log",
+  "title": "Registro Missioni",
+  "description": "Registro delle missioni principali e secondarie.",
+  "version": "0.1.0",
+
+  "authors": [
+    {
+      "name": "Mio Nome"
+    }
+  ],
+
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+
+  "socket": true,
+
+  "esmodules": [
+    "scripts/main.js"
+  ],
+
+  "styles": [
+    "styles/quest-log.css"
+  ],
+
+  "languages": [
+    {
+      "lang": "it",
+      "name": "Italiano",
+      "path": "lang/it.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ]
+}

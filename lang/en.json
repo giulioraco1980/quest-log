@@ -1,0 +1,115 @@
+{
+  "QUESTLOG.Title": "Quest Log",
+  "QUESTLOG.Subtitle": "Your adventures, our story",
+  "QUESTLOG.Quote": "Every great story begins with a quest.",
+
+  "QUESTLOG.Tabs.Main": "Main",
+  "QUESTLOG.Tabs.Secondary": "Side Quests",
+  "QUESTLOG.Tabs.Archive": "Archive",
+
+  "QUESTLOG.Search.Placeholder": "Search quests...",
+
+  "QUESTLOG.Sections.Active": "To Do",
+  "QUESTLOG.Sections.Completed": "Completed",
+  "QUESTLOG.Sections.Failed": "Failed",
+  "QUESTLOG.Sections.Archived": "Archive",
+
+  "QUESTLOG.Empty.Active": "No active quests.",
+  "QUESTLOG.Empty.Archived": "No archived quests.",
+  "QUESTLOG.Empty.Steps": "No visible steps.",
+  "QUESTLOG.Empty.Selected": "No quest selected",
+  "QUESTLOG.Empty.SelectedHint": "Select a quest from the left column.",
+
+  "QUESTLOG.Actions.NewQuest": "New Quest",
+  "QUESTLOG.Actions.AddStep": "Add Step",
+  "QUESTLOG.Actions.Complete": "Mark as Completed",
+  "QUESTLOG.Actions.Fail": "Mark as Failed",
+  "QUESTLOG.Actions.Restore": "Restore",
+  "QUESTLOG.Actions.Archive": "Archive",
+  "QUESTLOG.Actions.RestoreArchive": "Restore from Archive",
+  "QUESTLOG.Actions.Edit": "Edit",
+  "QUESTLOG.Actions.Delete": "Delete",
+  "QUESTLOG.Actions.Reveal": "Reveal",
+  "QUESTLOG.Actions.Hide": "Hide",
+  "QUESTLOG.Actions.Save": "Save",
+  "QUESTLOG.Actions.Cancel": "Cancel",
+  "QUESTLOG.Actions.Create": "Create Quest",
+
+  "QUESTLOG.DetailTabs.Details": "Details",
+  "QUESTLOG.DetailTabs.Steps": "Steps",
+  "QUESTLOG.DetailTabs.Info": "Information",
+
+  "QUESTLOG.Fields.Title": "Quest Name",
+  "QUESTLOG.Fields.Description": "Description",
+  "QUESTLOG.Fields.Image": "Image",
+  "QUESTLOG.Fields.Type": "Type",
+  "QUESTLOG.Fields.Status": "Status",
+  "QUESTLOG.Fields.Visibility": "Visibility",
+  "QUESTLOG.Fields.Players": "Players",
+  "QUESTLOG.Fields.AuthorizedPlayers": "Authorized Players",
+  "QUESTLOG.Fields.StepName": "Step Name",
+  "QUESTLOG.Fields.VisibleSteps": "Visible Steps",
+  "QUESTLOG.Fields.CompletedSteps": "Completed Steps",
+
+  "QUESTLOG.Types.Main": "Main Quest",
+  "QUESTLOG.Types.Secondary": "Side Quest",
+
+  "QUESTLOG.Status.Active": "To Do",
+  "QUESTLOG.Status.Completed": "Completed",
+  "QUESTLOG.Status.Failed": "Failed",
+  "QUESTLOG.Status.Archived": "Archived",
+
+  "QUESTLOG.Visibility.Hidden": "Hidden",
+  "QUESTLOG.Visibility.Revealed": "Revealed",
+  "QUESTLOG.Visibility.AllPlayers": "All Players",
+  "QUESTLOG.Visibility.SelectedPlayers": "Selected Players",
+
+  "QUESTLOG.Steps.Secret": "Secret",
+  "QUESTLOG.Steps.SecretOption": "Secret Step",
+
+  "QUESTLOG.Quest.HiddenOption": "Hidden Quest",
+
+  "QUESTLOG.Dialog.NewQuest": "New Quest",
+  "QUESTLOG.Dialog.EditQuest": "Edit Quest",
+  "QUESTLOG.Dialog.NewStep": "New Step",
+  "QUESTLOG.Dialog.EditStep": "Edit Step",
+  "QUESTLOG.Dialog.ArchiveQuest": "Archive Quest",
+  "QUESTLOG.Dialog.DeleteQuest": "Delete Quest",
+
+  "QUESTLOG.Confirm.Archive": "Do you want to move {title} to the Archive?",
+  "QUESTLOG.Confirm.Delete": "Do you really want to delete {title}?",
+
+  "QUESTLOG.Notifications.NewQuest": "New quest: {title}",
+  "QUESTLOG.Notifications.RevealedQuest": "Quest revealed: {title}",
+  "QUESTLOG.Notifications.NewObjective": "New objective: {title}",
+  "QUESTLOG.Notifications.CompletedObjective": "Objective completed: {title}",
+  "QUESTLOG.Notifications.CompletedQuest": "Quest completed: {title}",
+  "QUESTLOG.Notifications.FailedQuest": "Quest failed: {title}",
+
+  "QUESTLOG.Tooltips.Collapse": "Collapse quest",
+  "QUESTLOG.Tooltips.Expand": "Expand quest",
+  "QUESTLOG.Tooltips.Reveal": "Reveal",
+  "QUESTLOG.Tooltips.Hide": "Hide",
+  "QUESTLOG.Tooltips.Edit": "Edit",
+  "QUESTLOG.Tooltips.Delete": "Delete",
+
+  "QUESTLOG.Info.Mission": "Quest",
+  "QUESTLOG.Info.Management": "Management",
+  "QUESTLOG.Info.Description": "Quest Description",
+
+  "QUESTLOG.Settings.Quests": "Quests",
+
+  "QUESTLOG.Keybindings.Open.Name": "Open Quest Log",
+  "QUESTLOG.Keybindings.Open.Hint": "Opens or brings the Quest Log to the front.",
+
+  "QUESTLOG.Keybindings.NewMain.Name": "Create Main Quest",
+  "QUESTLOG.Keybindings.NewMain.Hint": "Opens the window to create a new main quest.",
+
+  "QUESTLOG.Keybindings.NewSecondary.Name": "Create Side Quest",
+  "QUESTLOG.Keybindings.NewSecondary.Hint": "Opens the window to create a new side quest.",
+
+  "QUESTLOG.SceneControls.Group": "Quests",
+  "QUESTLOG.SceneControls.Open": "Open Quest Log",
+  "QUESTLOG.SceneControls.NewMain": "New Main Quest",
+  "QUESTLOG.SceneControls.NewSecondary": "New Side Quest"
+}

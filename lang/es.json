@@ -1,0 +1,115 @@
+{
+  "QUESTLOG.Title": "Registro de Misiones",
+  "QUESTLOG.Subtitle": "Tus aventuras, nuestra historia",
+  "QUESTLOG.Quote": "Toda gran historia comienza con una misión.",
+
+  "QUESTLOG.Tabs.Main": "Principales",
+  "QUESTLOG.Tabs.Secondary": "Secundarias",
+  "QUESTLOG.Tabs.Archive": "Archivo",
+
+  "QUESTLOG.Search.Placeholder": "Buscar misiones...",
+
+  "QUESTLOG.Sections.Active": "Por completar",
+  "QUESTLOG.Sections.Completed": "Completadas",
+  "QUESTLOG.Sections.Failed": "Fallidas",
+  "QUESTLOG.Sections.Archived": "Archivo",
+
+  "QUESTLOG.Empty.Active": "No hay misiones activas.",
+  "QUESTLOG.Empty.Archived": "No hay misiones archivadas.",
+  "QUESTLOG.Empty.Steps": "No hay etapas visibles.",
+  "QUESTLOG.Empty.Selected": "Ninguna misión seleccionada",
+  "QUESTLOG.Empty.SelectedHint": "Selecciona una misión en la columna izquierda.",
+
+  "QUESTLOG.Actions.NewQuest": "Nueva Misión",
+  "QUESTLOG.Actions.AddStep": "Añadir Etapa",
+  "QUESTLOG.Actions.Complete": "Marcar como Completada",
+  "QUESTLOG.Actions.Fail": "Marcar como Fallida",
+  "QUESTLOG.Actions.Restore": "Restaurar",
+  "QUESTLOG.Actions.Archive": "Archivar",
+  "QUESTLOG.Actions.RestoreArchive": "Restaurar del Archivo",
+  "QUESTLOG.Actions.Edit": "Editar",
+  "QUESTLOG.Actions.Delete": "Eliminar",
+  "QUESTLOG.Actions.Reveal": "Revelar",
+  "QUESTLOG.Actions.Hide": "Ocultar",
+  "QUESTLOG.Actions.Save": "Guardar",
+  "QUESTLOG.Actions.Cancel": "Cancelar",
+  "QUESTLOG.Actions.Create": "Crear Misión",
+
+  "QUESTLOG.DetailTabs.Details": "Detalles",
+  "QUESTLOG.DetailTabs.Steps": "Etapas",
+  "QUESTLOG.DetailTabs.Info": "Información",
+
+  "QUESTLOG.Fields.Title": "Nombre de la misión",
+  "QUESTLOG.Fields.Description": "Descripción",
+  "QUESTLOG.Fields.Image": "Imagen",
+  "QUESTLOG.Fields.Type": "Tipo",
+  "QUESTLOG.Fields.Status": "Estado",
+  "QUESTLOG.Fields.Visibility": "Visibilidad",
+  "QUESTLOG.Fields.Players": "Jugadores",
+  "QUESTLOG.Fields.AuthorizedPlayers": "Jugadores autorizados",
+  "QUESTLOG.Fields.StepName": "Nombre de la etapa",
+  "QUESTLOG.Fields.VisibleSteps": "Etapas visibles",
+  "QUESTLOG.Fields.CompletedSteps": "Etapas completadas",
+
+  "QUESTLOG.Types.Main": "Misión Principal",
+  "QUESTLOG.Types.Secondary": "Misión Secundaria",
+
+  "QUESTLOG.Status.Active": "Por completar",
+  "QUESTLOG.Status.Completed": "Completada",
+  "QUESTLOG.Status.Failed": "Fallida",
+  "QUESTLOG.Status.Archived": "Archivada",
+
+  "QUESTLOG.Visibility.Hidden": "Oculta",
+  "QUESTLOG.Visibility.Revealed": "Revelada",
+  "QUESTLOG.Visibility.AllPlayers": "Todos los jugadores",
+  "QUESTLOG.Visibility.SelectedPlayers": "Jugadores seleccionados",
+
+  "QUESTLOG.Steps.Secret": "Secreta",
+  "QUESTLOG.Steps.SecretOption": "Etapa secreta",
+
+  "QUESTLOG.Quest.HiddenOption": "Misión oculta",
+
+  "QUESTLOG.Dialog.NewQuest": "Nueva Misión",
+  "QUESTLOG.Dialog.EditQuest": "Editar Misión",
+  "QUESTLOG.Dialog.NewStep": "Nueva Etapa",
+  "QUESTLOG.Dialog.EditStep": "Editar Etapa",
+  "QUESTLOG.Dialog.ArchiveQuest": "Archivar Misión",
+  "QUESTLOG.Dialog.DeleteQuest": "Eliminar Misión",
+
+  "QUESTLOG.Confirm.Archive": "¿Quieres mover {title} al Archivo?",
+  "QUESTLOG.Confirm.Delete": "¿Realmente quieres eliminar {title}?",
+
+  "QUESTLOG.Notifications.NewQuest": "Nueva misión: {title}",
+  "QUESTLOG.Notifications.RevealedQuest": "Misión revelada: {title}",
+  "QUESTLOG.Notifications.NewObjective": "Nuevo objetivo: {title}",
+  "QUESTLOG.Notifications.CompletedObjective": "Objetivo completado: {title}",
+  "QUESTLOG.Notifications.CompletedQuest": "Misión completada: {title}",
+  "QUESTLOG.Notifications.FailedQuest": "Misión fallida: {title}",
+
+  "QUESTLOG.Tooltips.Collapse": "Contraer misión",
+  "QUESTLOG.Tooltips.Expand": "Expandir misión",
+  "QUESTLOG.Tooltips.Reveal": "Revelar",
+  "QUESTLOG.Tooltips.Hide": "Ocultar",
+  "QUESTLOG.Tooltips.Edit": "Editar",
+  "QUESTLOG.Tooltips.Delete": "Eliminar",
+
+  "QUESTLOG.Info.Mission": "Misión",
+  "QUESTLOG.Info.Management": "Gestión",
+  "QUESTLOG.Info.Description": "Descripción de la misión",
+
+  "QUESTLOG.Settings.Quests": "Misiones",
+
+  "QUESTLOG.Keybindings.Open.Name": "Abrir Registro de Misiones",
+  "QUESTLOG.Keybindings.Open.Hint": "Abre o trae al frente el Registro de Misiones.",
+
+  "QUESTLOG.Keybindings.NewMain.Name": "Crear Misión Principal",
+  "QUESTLOG.Keybindings.NewMain.Hint": "Abre directamente la ventana para crear una nueva misión principal.",
+
+  "QUESTLOG.Keybindings.NewSecondary.Name": "Crear Misión Secundaria",
+  "QUESTLOG.Keybindings.NewSecondary.Hint": "Abre directamente la ventana para crear una nueva misión secundaria.",
+
+  "QUESTLOG.SceneControls.Group": "Misiones",
+  "QUESTLOG.SceneControls.Open": "Abrir Registro de Misiones",
+  "QUESTLOG.SceneControls.NewMain": "Nueva Misión Principal",
+  "QUESTLOG.SceneControls.NewSecondary": "Nueva Misión Secundaria"
+}

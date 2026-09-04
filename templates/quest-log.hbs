@@ -1,0 +1,1185 @@
+<div class="quest-log-shell">
+
+  <header class="quest-log-hero">
+
+    <div class="quest-brand">
+
+      <div class="quest-brand-symbol">
+        ✦
+      </div>
+
+      <div>
+
+        <h1>
+          {{localize "QUESTLOG.Title"}}
+        </h1>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <nav class="quest-main-tabs">
+
+    <button
+      type="button"
+      data-tab="main"
+      class="{{#if isMainTab}}active{{/if}}"
+    >
+      {{localize "QUESTLOG.Tabs.Main"}}
+    </button>
+
+    <button
+      type="button"
+      data-tab="secondary"
+      class="{{#if isSecondaryTab}}active{{/if}}"
+    >
+      {{localize "QUESTLOG.Tabs.Secondary"}}
+    </button>
+
+    <button
+      type="button"
+      data-tab="archive"
+      class="{{#if isArchiveTab}}active{{/if}}"
+    >
+      {{localize "QUESTLOG.Tabs.Archive"}}
+    </button>
+
+  </nav>
+
+
+  <div class="quest-workspace">
+
+    <!-- COLONNA SINISTRA -->
+
+    <aside class="quest-browser">
+
+      <div class="quest-search-row">
+
+        <div class="quest-search-box">
+
+          <span class="quest-search-icon">
+            🔍
+          </span>
+
+          <input
+            type="text"
+            placeholder="{{localize "QUESTLOG.Search.Placeholder"}}"
+            data-quest-search
+          >
+
+        </div>
+
+      </div>
+
+
+      {{#if isArchiveTab}}
+
+        <div class="quest-list-section">
+
+          <h2 class="quest-list-heading archive">
+            ◇ {{localize "QUESTLOG.Sections.Archived"}} ({{archivedQuests.length}})
+          </h2>
+
+          {{#each archivedQuests}}
+
+            <button
+              type="button"
+              class="quest-list-card"
+              data-select-quest="{{this.id}}"
+              data-search-text="{{this.title}} {{this.description}}"
+            >
+
+              {{#if this.image}}
+
+                <img
+                  src="{{this.image}}"
+                  alt=""
+                  class="quest-list-image"
+                >
+
+              {{else}}
+
+                <div class="quest-list-image placeholder">
+                  ✦
+                </div>
+
+              {{/if}}
+
+              <span class="quest-list-content">
+
+                <strong>
+                  {{this.title}}
+                </strong>
+
+                <small>
+                  {{this.description}}
+                </small>
+
+                <span class="quest-list-meta">
+
+                  <span class="mini-badge archived">
+
+                    {{#if this.archiveStatusClass}}
+
+                      {{#if this.isFailed}}
+                        {{localize "QUESTLOG.Status.Failed"}}
+                      {{else}}
+                        {{this.archiveStatusLabel}}
+                      {{/if}}
+
+                    {{else}}
+
+                      {{localize "QUESTLOG.Status.Archived"}}
+
+                    {{/if}}
+
+                  </span>
+
+                </span>
+
+              </span>
+
+            </button>
+
+          {{else}}
+
+            <p class="quest-empty-list">
+              {{localize "QUESTLOG.Empty.Archived"}}
+            </p>
+
+          {{/each}}
+
+        </div>
+
+      {{else}}
+
+        <div class="quest-list-section">
+
+          <h2 class="quest-list-heading active">
+            ◇ {{localize "QUESTLOG.Sections.Active"}} ({{activeQuests.length}})
+          </h2>
+
+          {{#each activeQuests}}
+
+            <button
+              type="button"
+              class="quest-list-card"
+              data-select-quest="{{this.id}}"
+              data-search-text="{{this.title}} {{this.description}}"
+            >
+
+              {{#if this.image}}
+
+                <img
+                  src="{{this.image}}"
+                  alt=""
+                  class="quest-list-image"
+                >
+
+              {{else}}
+
+                <div class="quest-list-image placeholder">
+                  ✦
+                </div>
+
+              {{/if}}
+
+              <span class="quest-list-content">
+
+                <strong>
+                  {{this.title}}
+                </strong>
+
+                <small>
+                  {{this.description}}
+                </small>
+
+                <span class="quest-list-meta">
+
+                  <span class="mini-badge">
+
+                    {{#if this.isActive}}
+
+                      {{#if this.isHidden}}
+                        {{localize "QUESTLOG.Visibility.Hidden"}}
+                      {{else}}
+                        {{localize "QUESTLOG.Status.Active"}}
+                      {{/if}}
+
+                    {{/if}}
+
+                  </span>
+
+                </span>
+
+              </span>
+
+            </button>
+
+          {{else}}
+
+            <p class="quest-empty-list">
+              {{localize "QUESTLOG.Empty.Active"}}
+            </p>
+
+          {{/each}}
+
+        </div>
+
+
+        <div class="quest-list-section">
+
+          <h2 class="quest-list-heading completed">
+            ◇ {{localize "QUESTLOG.Sections.Completed"}} ({{completedQuests.length}})
+          </h2>
+
+          {{#each completedQuests}}
+
+            <button
+              type="button"
+              class="quest-list-card"
+              data-select-quest="{{this.id}}"
+              data-search-text="{{this.title}} {{this.description}}"
+            >
+
+              {{#if this.image}}
+
+                <img
+                  src="{{this.image}}"
+                  alt=""
+                  class="quest-list-image"
+                >
+
+              {{else}}
+
+                <div class="quest-list-image placeholder">
+                  ✓
+                </div>
+
+              {{/if}}
+
+              <span class="quest-list-content">
+
+                <strong>
+                  {{this.title}}
+                </strong>
+
+                <small>
+                  {{this.description}}
+                </small>
+
+                <span class="quest-list-meta">
+
+                  <span class="mini-badge completed">
+                    {{localize "QUESTLOG.Status.Completed"}}
+                  </span>
+
+                </span>
+
+              </span>
+
+            </button>
+
+          {{/each}}
+
+        </div>
+
+
+        <div class="quest-list-section">
+
+          <h2 class="quest-list-heading failed">
+            ☠ {{localize "QUESTLOG.Sections.Failed"}} ({{failedQuests.length}})
+          </h2>
+
+          {{#each failedQuests}}
+
+            <button
+              type="button"
+              class="quest-list-card"
+              data-select-quest="{{this.id}}"
+              data-search-text="{{this.title}} {{this.description}}"
+            >
+
+              {{#if this.image}}
+
+                <img
+                  src="{{this.image}}"
+                  alt=""
+                  class="quest-list-image"
+                >
+
+              {{else}}
+
+                <div class="quest-list-image placeholder">
+                  ☠
+                </div>
+
+              {{/if}}
+
+              <span class="quest-list-content">
+
+                <strong>
+                  {{this.title}}
+                </strong>
+
+                <small>
+                  {{this.description}}
+                </small>
+
+                <span class="quest-list-meta">
+
+                  <span class="mini-badge failed">
+                    {{localize "QUESTLOG.Status.Failed"}}
+                  </span>
+
+                </span>
+
+              </span>
+
+            </button>
+
+          {{/each}}
+
+        </div>
+
+      {{/if}}
+
+
+      {{#if isGM}}
+
+        <div class="quest-browser-footer">
+
+          <button
+            type="button"
+            data-action="new-quest"
+          >
+            ＋ {{localize "QUESTLOG.Actions.NewQuest"}}
+          </button>
+
+        </div>
+
+      {{/if}}
+
+    </aside>
+
+
+    <!-- COLONNA CENTRALE -->
+
+    <main class="quest-detail-column">
+
+      {{#if hasSelectedQuest}}
+
+        {{#with selectedQuest}}
+
+          <article
+            class="quest-detail {{#if this.isCollapsed}}is-collapsed{{/if}}"
+          >
+
+            <button
+              type="button"
+              class="quest-detail-collapse"
+              data-action="toggle-detail-collapse"
+              title="{{localize "QUESTLOG.Tooltips.Collapse"}}"
+            >
+              ▴
+            </button>
+
+
+            <div class="quest-detail-banner {{#unless this.image}}no-image{{/unless}}">
+
+              {{#if this.image}}
+
+                <img
+                  src="{{this.image}}"
+                  alt="{{this.title}}"
+                >
+
+              {{/if}}
+
+
+              <div class="quest-detail-banner-overlay">
+
+                <h2>
+                  {{this.title}}
+                </h2>
+
+                <div class="quest-detail-badges">
+
+                  <span class="detail-badge type">
+
+                    {{#if this.isActive}}
+
+                      {{#if @root.isMainTab}}
+                        {{localize "QUESTLOG.Types.Main"}}
+                      {{else}}
+                        {{localize "QUESTLOG.Types.Secondary"}}
+                      {{/if}}
+
+                    {{else}}
+
+                      {{this.typeLabel}}
+
+                    {{/if}}
+
+                  </span>
+
+                  <span class="detail-badge {{this.statusClass}}">
+
+                    {{#if this.isActive}}
+                      {{localize "QUESTLOG.Status.Active"}}
+                    {{/if}}
+
+                    {{#if this.isCompleted}}
+                      {{localize "QUESTLOG.Status.Completed"}}
+                    {{/if}}
+
+                    {{#if this.isFailed}}
+                      {{localize "QUESTLOG.Status.Failed"}}
+                    {{/if}}
+
+                    {{#if this.isArchived}}
+                      {{localize "QUESTLOG.Status.Archived"}}
+                    {{/if}}
+
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="quest-detail-collapsible">
+
+              <div class="quest-inner-tabs">
+
+                <button
+                  type="button"
+                  data-detail-tab="details"
+                  class="{{#if @root.isDetailsTab}}active{{/if}}"
+                >
+                  {{localize "QUESTLOG.DetailTabs.Details"}}
+                </button>
+
+                <button
+                  type="button"
+                  data-detail-tab="steps"
+                  class="{{#if @root.isStepsTab}}active{{/if}}"
+                >
+                  {{localize "QUESTLOG.DetailTabs.Steps"}}
+                </button>
+
+                <button
+                  type="button"
+                  data-detail-tab="info"
+                  class="{{#if @root.isInfoTab}}active{{/if}}"
+                >
+                  {{localize "QUESTLOG.DetailTabs.Info"}}
+                </button>
+
+              </div>
+
+
+              <!-- DETTAGLI -->
+
+              <section
+                class="quest-detail-panel"
+                data-detail-panel="details"
+                {{#unless @root.isDetailsTab}}hidden{{/unless}}
+              >
+
+                <div class="quest-paper">
+
+                  <div class="quest-paper-title">
+                    {{localize "QUESTLOG.Info.Description"}}
+                  </div>
+
+                  <div class="quest-objective-summary">
+
+                    {{#if this.description}}
+                      {{this.description}}
+                    {{else}}
+                      —
+                    {{/if}}
+
+                  </div>
+
+
+                  <div class="quest-paper-divider">
+                    {{localize "QUESTLOG.Fields.Status"}}
+                  </div>
+
+
+                  <div class="quest-detail-info-grid">
+
+                    <div>
+
+                      <span>
+                        {{localize "QUESTLOG.Fields.Type"}}
+                      </span>
+
+                      <strong>
+
+                        {{#if this.isMain}}
+                          {{localize "QUESTLOG.Types.Main"}}
+                        {{else}}
+                          {{this.typeLabel}}
+                        {{/if}}
+
+                      </strong>
+
+                    </div>
+
+
+                    <div>
+
+                      <span>
+                        {{localize "QUESTLOG.Fields.Status"}}
+                      </span>
+
+                      <strong class="{{this.statusClass}}">
+
+                        {{#if this.isActive}}
+                          {{localize "QUESTLOG.Status.Active"}}
+                        {{/if}}
+
+                        {{#if this.isCompleted}}
+                          {{localize "QUESTLOG.Status.Completed"}}
+                        {{/if}}
+
+                        {{#if this.isFailed}}
+                          {{localize "QUESTLOG.Status.Failed"}}
+                        {{/if}}
+
+                        {{#if this.isArchived}}
+                          {{localize "QUESTLOG.Status.Archived"}}
+                        {{/if}}
+
+                      </strong>
+
+                    </div>
+
+
+                    <div>
+
+                      <span>
+                        {{localize "QUESTLOG.Fields.Visibility"}}
+                      </span>
+
+                      <strong>
+
+                        {{#if this.isHidden}}
+                          {{localize "QUESTLOG.Visibility.Hidden"}}
+                        {{else}}
+                          {{localize "QUESTLOG.Visibility.Revealed"}}
+                        {{/if}}
+
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </section>
+
+
+              <!-- SOTTOFASI -->
+
+              <section
+                class="quest-detail-panel"
+                data-detail-panel="steps"
+                {{#unless @root.isStepsTab}}hidden{{/unless}}
+              >
+
+                <div class="quest-paper">
+
+                  <div class="quest-paper-title">
+                    {{localize "QUESTLOG.DetailTabs.Steps"}}
+                  </div>
+
+
+                  <div class="quest-detail-steps">
+
+                    {{#each this.steps}}
+
+                      <div
+                        class="quest-detail-step {{#if this.completed}}completed{{/if}} {{#if this.isSecret}}secret{{/if}}"
+                      >
+
+                        {{#if @root.isGM}}
+
+                          <button
+                            type="button"
+                            class="detail-step-check"
+                            data-action="toggle-step"
+                            data-quest-id="{{../this.id}}"
+                            data-step-id="{{this.id}}"
+                          >
+                            {{#if this.completed}}
+                              ✓
+                            {{else}}
+                              □
+                            {{/if}}
+                          </button>
+
+                        {{else}}
+
+                          <span class="detail-step-check readonly">
+
+                            {{#if this.completed}}
+                              ✓
+                            {{else}}
+                              □
+                            {{/if}}
+
+                          </span>
+
+                        {{/if}}
+
+
+                        <div class="detail-step-text">
+
+                          <strong>
+                            {{this.title}}
+                          </strong>
+
+                          {{#if @root.isGM}}
+
+                            {{#if this.isSecret}}
+
+                              <small class="detail-secret">
+                                🔒 {{localize "QUESTLOG.Steps.Secret"}}
+                              </small>
+
+                            {{/if}}
+
+                          {{/if}}
+
+                        </div>
+
+
+                        {{#if @root.isGM}}
+
+                          <div class="detail-step-actions">
+
+                            {{#if this.isSecret}}
+
+                              <button
+                                type="button"
+                                data-action="reveal-step"
+                                data-quest-id="{{../this.id}}"
+                                data-step-id="{{this.id}}"
+                                title="{{localize "QUESTLOG.Tooltips.Reveal"}}"
+                              >
+                                👁
+                              </button>
+
+                            {{else}}
+
+                              <button
+                                type="button"
+                                data-action="hide-step"
+                                data-quest-id="{{../this.id}}"
+                                data-step-id="{{this.id}}"
+                                title="{{localize "QUESTLOG.Tooltips.Hide"}}"
+                              >
+                                🙈
+                              </button>
+
+                            {{/if}}
+
+
+                            <button
+                              type="button"
+                              data-action="edit-step"
+                              data-quest-id="{{../this.id}}"
+                              data-step-id="{{this.id}}"
+                              title="{{localize "QUESTLOG.Tooltips.Edit"}}"
+                            >
+                              ✎
+                            </button>
+
+
+                            <button
+                              type="button"
+                              data-action="delete-step"
+                              data-quest-id="{{../this.id}}"
+                              data-step-id="{{this.id}}"
+                              title="{{localize "QUESTLOG.Tooltips.Delete"}}"
+                            >
+                              ×
+                            </button>
+
+                          </div>
+
+                        {{/if}}
+
+                      </div>
+
+                    {{else}}
+
+                      <div class="quest-no-objectives">
+                        {{localize "QUESTLOG.Empty.Steps"}}
+                      </div>
+
+                    {{/each}}
+
+                  </div>
+
+
+                  {{#if @root.isGM}}
+
+                    {{#if this.isActive}}
+
+                      <button
+                        type="button"
+                        class="add-detail-step"
+                        data-action="add-step"
+                        data-quest-id="{{this.id}}"
+                      >
+                        ＋ {{localize "QUESTLOG.Actions.AddStep"}}
+                      </button>
+
+                    {{/if}}
+
+                  {{/if}}
+
+                </div>
+
+              </section>
+
+
+              <!-- INFORMAZIONI -->
+
+              <section
+                class="quest-detail-panel"
+                data-detail-panel="info"
+                {{#unless @root.isInfoTab}}hidden{{/unless}}
+              >
+
+                <div class="quest-paper">
+
+                  <div class="quest-paper-title">
+                    {{localize "QUESTLOG.DetailTabs.Info"}}
+                  </div>
+
+
+                  <div class="quest-detail-info-grid">
+
+                    <div>
+
+                      <span>
+                        {{localize "QUESTLOG.Fields.Type"}}
+                      </span>
+
+                      <strong>
+                        {{this.typeLabel}}
+                      </strong>
+
+                    </div>
+
+
+                    <div>
+
+                      <span>
+                        {{localize "QUESTLOG.Fields.Status"}}
+                      </span>
+
+                      <strong class="{{this.statusClass}}">
+
+                        {{#if this.isActive}}
+                          {{localize "QUESTLOG.Status.Active"}}
+                        {{/if}}
+
+                        {{#if this.isCompleted}}
+                          {{localize "QUESTLOG.Status.Completed"}}
+                        {{/if}}
+
+                        {{#if this.isFailed}}
+                          {{localize "QUESTLOG.Status.Failed"}}
+                        {{/if}}
+
+                        {{#if this.isArchived}}
+                          {{localize "QUESTLOG.Status.Archived"}}
+                        {{/if}}
+
+                      </strong>
+
+                    </div>
+
+
+                    <div>
+
+                      <span>
+                        {{localize "QUESTLOG.Fields.Visibility"}}
+                      </span>
+
+                      <strong>
+
+                        {{#if this.isHidden}}
+                          {{localize "QUESTLOG.Visibility.Hidden"}}
+                        {{else}}
+                          {{localize "QUESTLOG.Visibility.Revealed"}}
+                        {{/if}}
+
+                      </strong>
+
+                    </div>
+
+
+                    <div>
+
+                      <span>
+                        {{localize "QUESTLOG.Fields.Players"}}
+                      </span>
+
+                      <strong>
+                        {{this.visibilityLabel}}
+                      </strong>
+
+                    </div>
+
+
+                    <div>
+
+                      <span>
+                        {{localize "QUESTLOG.Fields.VisibleSteps"}}
+                      </span>
+
+                      <strong>
+                        {{this.visibleStepCount}}
+                      </strong>
+
+                    </div>
+
+
+                    <div>
+
+                      <span>
+                        {{localize "QUESTLOG.Fields.CompletedSteps"}}
+                      </span>
+
+                      <strong>
+                        {{this.completedStepCount}}
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </section>
+
+
+              <!-- AZIONI GM -->
+
+              {{#if @root.isGM}}
+
+                <div class="quest-detail-actions">
+
+                  {{#if this.isActive}}
+
+                    <button
+                      type="button"
+                      class="action-complete"
+                      data-action="complete-quest"
+                      data-quest-id="{{this.id}}"
+                    >
+                      ✓ {{localize "QUESTLOG.Actions.Complete"}}
+                    </button>
+
+                    <button
+                      type="button"
+                      class="action-fail"
+                      data-action="fail-quest"
+                      data-quest-id="{{this.id}}"
+                    >
+                      ☠ {{localize "QUESTLOG.Actions.Fail"}}
+                    </button>
+
+                  {{/if}}
+
+
+                  {{#if this.isCompleted}}
+
+                    <button
+                      type="button"
+                      class="action-restore"
+                      data-action="restore-quest"
+                      data-quest-id="{{this.id}}"
+                    >
+                      ↶ {{localize "QUESTLOG.Actions.Restore"}}
+                    </button>
+
+                    <button
+                      type="button"
+                      class="action-archive"
+                      data-action="archive-quest"
+                      data-quest-id="{{this.id}}"
+                    >
+                      📦 {{localize "QUESTLOG.Actions.Archive"}}
+                    </button>
+
+                  {{/if}}
+
+
+                  {{#if this.isFailed}}
+
+                    <button
+                      type="button"
+                      class="action-restore"
+                      data-action="restore-quest"
+                      data-quest-id="{{this.id}}"
+                    >
+                      ↶ {{localize "QUESTLOG.Actions.Restore"}}
+                    </button>
+
+                    <button
+                      type="button"
+                      class="action-archive"
+                      data-action="archive-quest"
+                      data-quest-id="{{this.id}}"
+                    >
+                      📦 {{localize "QUESTLOG.Actions.Archive"}}
+                    </button>
+
+                  {{/if}}
+
+
+                  {{#if this.isArchived}}
+
+                    <button
+                      type="button"
+                      class="action-restore"
+                      data-action="restore-archived-quest"
+                      data-quest-id="{{this.id}}"
+                    >
+                      ↶ {{localize "QUESTLOG.Actions.RestoreArchive"}}
+                    </button>
+
+                  {{/if}}
+
+
+                  <button
+                    type="button"
+                    class="action-edit"
+                    data-action="edit-quest"
+                    data-quest-id="{{this.id}}"
+                  >
+                    ✎ {{localize "QUESTLOG.Actions.Edit"}}
+                  </button>
+
+                </div>
+
+              {{/if}}
+
+            </div>
+
+          </article>
+
+        {{/with}}
+
+      {{else}}
+
+        <div class="quest-nothing-selected">
+
+          <div class="nothing-symbol">
+            ✦
+          </div>
+
+          <h2>
+            {{localize "QUESTLOG.Empty.Selected"}}
+          </h2>
+
+          <p>
+            {{localize "QUESTLOG.Empty.SelectedHint"}}
+          </p>
+
+        </div>
+
+      {{/if}}
+
+    </main>
+
+
+    <!-- COLONNA DESTRA -->
+
+    <aside class="quest-info-column">
+
+      {{#if hasSelectedQuest}}
+
+        {{#with selectedQuest}}
+
+          <section class="quest-info-card">
+
+            <h3>
+              {{localize "QUESTLOG.Info.Mission"}}
+            </h3>
+
+            <div class="quest-info-title">
+
+              {{#if this.image}}
+
+                <img
+                  src="{{this.image}}"
+                  alt=""
+                >
+
+              {{else}}
+
+                <div class="quest-info-symbol">
+                  ✦
+                </div>
+
+              {{/if}}
+
+              <div>
+
+                <strong>
+                  {{this.title}}
+                </strong>
+
+                <small>
+                  {{this.typeLabel}}
+                </small>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <section class="quest-info-card">
+
+            <h3>
+              {{localize "QUESTLOG.Fields.Status"}}
+            </h3>
+
+
+            <div class="quest-stat-row">
+
+              <span>
+                {{localize "QUESTLOG.Fields.Status"}}
+              </span>
+
+              <strong class="{{this.statusClass}}">
+
+                {{#if this.isActive}}
+                  {{localize "QUESTLOG.Status.Active"}}
+                {{/if}}
+
+                {{#if this.isCompleted}}
+                  {{localize "QUESTLOG.Status.Completed"}}
+                {{/if}}
+
+                {{#if this.isFailed}}
+                  {{localize "QUESTLOG.Status.Failed"}}
+                {{/if}}
+
+                {{#if this.isArchived}}
+                  {{localize "QUESTLOG.Status.Archived"}}
+                {{/if}}
+
+              </strong>
+
+            </div>
+
+
+            <div class="quest-stat-row">
+
+              <span>
+                {{localize "QUESTLOG.Fields.Visibility"}}
+              </span>
+
+              <strong>
+
+                {{#if this.isHidden}}
+                  {{localize "QUESTLOG.Visibility.Hidden"}}
+                {{else}}
+                  {{localize "QUESTLOG.Visibility.Revealed"}}
+                {{/if}}
+
+              </strong>
+
+            </div>
+
+          </section>
+
+
+          <section class="quest-info-card">
+
+            <h3>
+              {{localize "QUESTLOG.Fields.Players"}}
+            </h3>
+
+            <p class="quest-info-text">
+              {{this.visibilityLabel}}
+            </p>
+
+          </section>
+
+
+          {{#if @root.isGM}}
+
+            <section class="quest-info-card">
+
+              <h3>
+                {{localize "QUESTLOG.Info.Management"}}
+              </h3>
+
+
+              {{#if this.isHidden}}
+
+                <button
+                  type="button"
+                  class="info-action"
+                  data-action="reveal-quest"
+                  data-quest-id="{{this.id}}"
+                >
+                  👁 {{localize "QUESTLOG.Actions.Reveal"}}
+                </button>
+
+              {{else}}
+
+                <button
+                  type="button"
+                  class="info-action"
+                  data-action="hide-quest"
+                  data-quest-id="{{this.id}}"
+                >
+                  🙈 {{localize "QUESTLOG.Actions.Hide"}}
+                </button>
+
+              {{/if}}
+
+
+              <button
+                type="button"
+                class="info-action danger"
+                data-action="delete-quest"
+                data-quest-id="{{this.id}}"
+              >
+                🗑 {{localize "QUESTLOG.Actions.Delete"}}
+              </button>
+
+            </section>
+
+          {{/if}}
+
+        {{/with}}
+
+      {{/if}}
+
+    </aside>
+
+  </div>
+
+</div>

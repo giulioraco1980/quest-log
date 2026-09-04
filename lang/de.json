@@ -1,0 +1,115 @@
+{
+  "QUESTLOG.Title": "Quest-Tagebuch",
+  "QUESTLOG.Subtitle": "Deine Abenteuer, unsere Geschichte",
+  "QUESTLOG.Quote": "Jede große Geschichte beginnt mit einer Quest.",
+
+  "QUESTLOG.Tabs.Main": "Hauptquests",
+  "QUESTLOG.Tabs.Secondary": "Nebenquests",
+  "QUESTLOG.Tabs.Archive": "Archiv",
+
+  "QUESTLOG.Search.Placeholder": "Quests suchen...",
+
+  "QUESTLOG.Sections.Active": "Zu erledigen",
+  "QUESTLOG.Sections.Completed": "Abgeschlossen",
+  "QUESTLOG.Sections.Failed": "Gescheitert",
+  "QUESTLOG.Sections.Archived": "Archiv",
+
+  "QUESTLOG.Empty.Active": "Keine aktiven Quests.",
+  "QUESTLOG.Empty.Archived": "Keine archivierten Quests.",
+  "QUESTLOG.Empty.Steps": "Keine sichtbaren Schritte.",
+  "QUESTLOG.Empty.Selected": "Keine Quest ausgewählt",
+  "QUESTLOG.Empty.SelectedHint": "Wähle links eine Quest aus.",
+
+  "QUESTLOG.Actions.NewQuest": "Neue Quest",
+  "QUESTLOG.Actions.AddStep": "Schritt hinzufügen",
+  "QUESTLOG.Actions.Complete": "Als abgeschlossen markieren",
+  "QUESTLOG.Actions.Fail": "Als gescheitert markieren",
+  "QUESTLOG.Actions.Restore": "Wiederherstellen",
+  "QUESTLOG.Actions.Archive": "Archivieren",
+  "QUESTLOG.Actions.RestoreArchive": "Aus Archiv wiederherstellen",
+  "QUESTLOG.Actions.Edit": "Bearbeiten",
+  "QUESTLOG.Actions.Delete": "Löschen",
+  "QUESTLOG.Actions.Reveal": "Enthüllen",
+  "QUESTLOG.Actions.Hide": "Verbergen",
+  "QUESTLOG.Actions.Save": "Speichern",
+  "QUESTLOG.Actions.Cancel": "Abbrechen",
+  "QUESTLOG.Actions.Create": "Quest erstellen",
+
+  "QUESTLOG.DetailTabs.Details": "Details",
+  "QUESTLOG.DetailTabs.Steps": "Schritte",
+  "QUESTLOG.DetailTabs.Info": "Informationen",
+
+  "QUESTLOG.Fields.Title": "Questname",
+  "QUESTLOG.Fields.Description": "Beschreibung",
+  "QUESTLOG.Fields.Image": "Bild",
+  "QUESTLOG.Fields.Type": "Typ",
+  "QUESTLOG.Fields.Status": "Status",
+  "QUESTLOG.Fields.Visibility": "Sichtbarkeit",
+  "QUESTLOG.Fields.Players": "Spieler",
+  "QUESTLOG.Fields.AuthorizedPlayers": "Berechtigte Spieler",
+  "QUESTLOG.Fields.StepName": "Name des Schritts",
+  "QUESTLOG.Fields.VisibleSteps": "Sichtbare Schritte",
+  "QUESTLOG.Fields.CompletedSteps": "Abgeschlossene Schritte",
+
+  "QUESTLOG.Types.Main": "Hauptquest",
+  "QUESTLOG.Types.Secondary": "Nebenquest",
+
+  "QUESTLOG.Status.Active": "Zu erledigen",
+  "QUESTLOG.Status.Completed": "Abgeschlossen",
+  "QUESTLOG.Status.Failed": "Gescheitert",
+  "QUESTLOG.Status.Archived": "Archiviert",
+
+  "QUESTLOG.Visibility.Hidden": "Verborgen",
+  "QUESTLOG.Visibility.Revealed": "Enthüllt",
+  "QUESTLOG.Visibility.AllPlayers": "Alle Spieler",
+  "QUESTLOG.Visibility.SelectedPlayers": "Ausgewählte Spieler",
+
+  "QUESTLOG.Steps.Secret": "Geheim",
+  "QUESTLOG.Steps.SecretOption": "Geheimer Schritt",
+
+  "QUESTLOG.Quest.HiddenOption": "Verborgene Quest",
+
+  "QUESTLOG.Dialog.NewQuest": "Neue Quest",
+  "QUESTLOG.Dialog.EditQuest": "Quest bearbeiten",
+  "QUESTLOG.Dialog.NewStep": "Neuer Schritt",
+  "QUESTLOG.Dialog.EditStep": "Schritt bearbeiten",
+  "QUESTLOG.Dialog.ArchiveQuest": "Quest archivieren",
+  "QUESTLOG.Dialog.DeleteQuest": "Quest löschen",
+
+  "QUESTLOG.Confirm.Archive": "Möchtest du {title} ins Archiv verschieben?",
+  "QUESTLOG.Confirm.Delete": "Möchtest du {title} wirklich löschen?",
+
+  "QUESTLOG.Notifications.NewQuest": "Neue Quest: {title}",
+  "QUESTLOG.Notifications.RevealedQuest": "Quest enthüllt: {title}",
+  "QUESTLOG.Notifications.NewObjective": "Neues Ziel: {title}",
+  "QUESTLOG.Notifications.CompletedObjective": "Ziel abgeschlossen: {title}",
+  "QUESTLOG.Notifications.CompletedQuest": "Quest abgeschlossen: {title}",
+  "QUESTLOG.Notifications.FailedQuest": "Quest gescheitert: {title}",
+
+  "QUESTLOG.Tooltips.Collapse": "Quest einklappen",
+  "QUESTLOG.Tooltips.Expand": "Quest ausklappen",
+  "QUESTLOG.Tooltips.Reveal": "Enthüllen",
+  "QUESTLOG.Tooltips.Hide": "Verbergen",
+  "QUESTLOG.Tooltips.Edit": "Bearbeiten",
+  "QUESTLOG.Tooltips.Delete": "Löschen",
+
+  "QUESTLOG.Info.Mission": "Quest",
+  "QUESTLOG.Info.Management": "Verwaltung",
+  "QUESTLOG.Info.Description": "Questbeschreibung",
+
+  "QUESTLOG.Settings.Quests": "Quests",
+
+  "QUESTLOG.Keybindings.Open.Name": "Quest-Tagebuch öffnen",
+  "QUESTLOG.Keybindings.Open.Hint": "Öffnet das Quest-Tagebuch oder bringt es in den Vordergrund.",
+
+  "QUESTLOG.Keybindings.NewMain.Name": "Hauptquest erstellen",
+  "QUESTLOG.Keybindings.NewMain.Hint": "Öffnet direkt das Fenster zum Erstellen einer neuen Hauptquest.",
+
+  "QUESTLOG.Keybindings.NewSecondary.Name": "Nebenquest erstellen",
+  "QUESTLOG.Keybindings.NewSecondary.Hint": "Öffnet direkt das Fenster zum Erstellen einer neuen Nebenquest.",
+
+  "QUESTLOG.SceneControls.Group": "Quests",
+  "QUESTLOG.SceneControls.Open": "Quest-Tagebuch öffnen",
+  "QUESTLOG.SceneControls.NewMain": "Neue Hauptquest",
+  "QUESTLOG.SceneControls.NewSecondary": "Neue Nebenquest"
+}
