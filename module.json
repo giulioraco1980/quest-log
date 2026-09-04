@@ -1,12 +1,13 @@
 {
   "id": "quest-log",
   "title": "Registro Missioni",
-  "description": "Registro delle missioni principali e secondarie.",
+  "description": "A multilingual quest log module for Foundry Virtual Tabletop.",
   "version": "0.1.0",
 
   "authors": [
     {
-      "name": "Mio Nome"
+      "name": "giulioraco1980",
+      "url": "https://github.com/giulioraco1980"
     }
   ],
 
@@ -14,6 +15,8 @@
     "minimum": "14",
     "verified": "14"
   },
+
+  "url": "https://github.com/giulioraco1980/quest-log",
 
   "socket": true,
 
